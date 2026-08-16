@@ -1,0 +1,19 @@
+[project]
+name = "mars-rover-kata"
+version = "0.1.0"
+description = "Classic Mars Rover kata: plateau grid, L/R/M commands, edge wrap-around."
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+mars-rover = "mars_rover.rover:main"
+
+[dependency-groups]
+dev = ["pytest>=8.0.0"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["mars_rover"]
